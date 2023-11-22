@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%; 
+    
+    --color-base-white:#FFF;
+    --color-base-green-100:#ffffff33;
+    --color-base-green-200: #065E7C;
+    --color-base-black-100: #202024;
+    --color-base-black-200: #121214;
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#app {
+    max-width: 43rem;
+    height: 194rem;
+    margin-inline: auto;
+} 
+
+.container {  
+    align-items: center;
+    gap: 2.6rem;
+}
+
+header {
+    background-color: var(--color-base-green-200);
+    display: flex;
+    gap: 2.4rem;
+    height: 7.2rem;
+    padding: 1.2rem 2.8rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+header form {
+    flex: 1;
+}
+
+.logo {
+    background-color: var(--color-base-white);
+    width: 4rem;
+    height: 4rem;
+    padding: .8rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.input-wrapper label  {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem 1.2rem;
+    
+    border-radius: .8rem;
+    border: 0;
+    background-color: var(--color-base-green-100);
+
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+#search::placeholder {
+    color: white;
+    opacity: 0.53;
+}
+
+.avatar {
+    background-color: var(--color-base-white);
+    width: 4rem;
+    height: 4rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.title h1{
+    color: var(--color-base-black-100);
+    font-family: Mulish;
+    font-size: 2.4rem;    
+    font-weight: 700;
+    line-height: 3.8rem;
+
+    padding: 3rem 6.5rem .8rem 2rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.icons img{
+    background-color: var(--color-base-green-200);
+ 
+    width: 4rem;
+    height: 4rem;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.principal p {
+
+    width: 41rem;
+    height: 75rem;
+    padding-left:2.4rem;
+
+    font-family: 'Mulish', sans-serif;
+    color: var(--color-base-black-200);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    text-align: left;
+}
+
+.sidebar {
+    padding-bottom: 4rem;
+    padding-left: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar h1{
+    color: var(--color-base-black-100);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 3.8rem;
+
+    padding: 3.2rem 2.4rem;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.item {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+
+    width: 38.4rem;
+    height: 10rem;
+}
+
+
+.item h2{
+    color: var(--color-base-black-100);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    padding-top: 0;
+}
+
+.item p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+
+    text-align: left;
+    padding: 0;
+
+    width: 21.5rem;
+    height: 7.6rem;
+}
+
+.item img {
+    width: 15rem;
+    height: 8.4rem;
+}
+
+footer {
+    color: var(--color-base-white);
+    background-color: var(--color-base-green-200);
+
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
+
+    display: flex;
+    width: 43rem;
+    height: 6.4rem;
+    padding: 1.6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+} 
+
+/* footer form {
+    flex: 1;
+} */
+
+@media (min-width: 1120px) {
+    #app {
+        display:grid;
+        /* grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr); */
+        
+        grid-template-areas: 
+        "A A"
+        "B C"
+        "D D";
+        max-width: 1440px;
+        height: 100vh;
+        
+        row-gap: 4rem;
+        column-gap: 4rem;
+    }
+
+    header {
+        grid-area: A;
+        width: 144rem;
+        justify-content: space-between;
+        padding: 1.2rem 11rem;
+    }
+
+    .principal {
+        grid-area: B;
+        padding-left: 9rem;
+        width: 80rem;
+    }
+
+    .principal p {
+        width: 80rem;
+        height: 40rem;        
+    }
+
+    .banner {
+        width: 80rem;
+        height: 40rem;
+        padding-left: 2.4rem;
+
+    }
+
+    .title {
+        width: 80rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .icons {
+        padding-top: 3.2rem;
+    }
+
+    .sidebar {
+        grid-area: C;
+        padding-right: 9rem;
+    }
+
+    .sidebar h1 {
+        padding-top: 0;
+    }
+
+    footer {
+        grid-area: D;
+        width: 144rem;
+    }
+   
+}
